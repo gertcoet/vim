@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='c:/Users/gert.coetzee/AppData'
+let g:netrw_dirhist_2='c:/Users/gert.coetzee'
+let g:netrw_dirhist_3='c:/Users/gert.coetzee/Documents'
