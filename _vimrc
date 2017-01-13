@@ -14,6 +14,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'cream-capitalization'
 "Plugin 'SQLComplete.vim'
 
 " All of your Plugins must be added before the following line
@@ -42,7 +43,8 @@ set clipboard=unnamed
 colorscheme solarized
 
 set tabstop=4			" number of visual spaces per TAB
-set softtabstop=4		" number of spaces in tab when editing
+set shiftwidth=4		"Set indent to correspond to tab
+set softtabstop=0		" number of spaces in tab when editing
 
 set number              " show line numbers
 set showcmd             " show command in bottom bar
@@ -86,6 +88,8 @@ nmap <Space-Enter> o<Esc>
 inoremap jk <esc>
 inoremap kj <esc>
 
+"map casing keys
+map <Leader>nc <f5>
 
 "highlight last inserted text
 nnoremap gV `[v`]
@@ -132,6 +136,11 @@ set noswapfile
 
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
+
+"this is to add a macro to put a comma at the end of the line
+let @c = '$a,j^'
+
+let @b = 'Si[jkEa],jkjS'
 
 "this a for SQL highlighting:
 "let g:sql_type_default = "sqlserver"
