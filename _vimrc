@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=c:/users/gert.coetzee/vimfiles/bundle/Vundle.vim/
-call vundle#begin('c:/users/gert.coetzee/vimfiles/bundle/')
+set rtp+=c:/users/gertc/vimfiles/bundle/Vundle.vim/
+call vundle#begin('c:/users/gertc/vimfiles/bundle/')
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -15,6 +15,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'cream-capitalization'
+Plugin 'blueyed/vim-diminactive'
+Plugin 'sqlserver.vim'
+Plugin 'pprovost/vim-ps1'
+Plugin 'mbbill/undotree'
 "Plugin 'SQLComplete.vim'
 
 " All of your Plugins must be added before the following line
@@ -143,7 +147,8 @@ let @c = '$a,j^'
 let @b = 'Si[jkEa],jkjS'
 
 "this a for SQL highlighting:
-"let g:sql_type_default = "sqlserver"
+autocmd BufNewFile,BufRead *.PRC   set syntax=SQL
+let g:sql_type_default = "sqlserver"
 "let g:ftplugin_sql_omni_key = '<C-a>'
   " GUI is running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
@@ -158,6 +163,8 @@ else
     set columns=100
   endif
 endif
+
+
 
 "This is to copy the file path to the clipboard
 " Convert slashes to backslashes for Windows.
@@ -199,4 +206,3 @@ endfunction
 "Plug 'SQLComplete.vim'
 "Plug 'scrooloose/nerdcommenter'
 "call plug#end()
-
